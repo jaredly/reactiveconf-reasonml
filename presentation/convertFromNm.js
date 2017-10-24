@@ -97,12 +97,12 @@ const childContent = node => {
     let content = node.content
     let appear = false
     let hidden = false
-    if (content.match(/^\!a\b/))  {
-      content = content.slice(2)
+    if (content.match(/^\!a /))  {
+      content = content.slice(3)
       appear = true
     }
-    if (content.match(/^\!h\b/))  {
-      content = content.slice(2)
+    if (content.match(/^\!h /))  {
+      content = content.slice(3)
       hidden = true
     }
 
@@ -135,7 +135,7 @@ const childContent = node => {
       if (node.type === 'code') {
         console.log(node)
         let lang = node.types.code.language || 'mllike'
-        body = <CodePane key={key} source={node.content} lang={lang} />
+        body = <CodePane key={key} source={content} lang={lang} />
       } else {
         body = null
       }
@@ -193,6 +193,7 @@ class Portal extends React.Component {
 }
 
 const collectNotes = (root, inNote, collector) => {
+  if (isDisabled(root)) return
   if (inNote || root.type === 'note') collector.push(root.content)
   root.children.forEach(child => collectNotes(child, inNote || root.type === 'note', collector))
 }

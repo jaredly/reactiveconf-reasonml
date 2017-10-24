@@ -434,15 +434,34 @@
               "_rev": null,
               "children": [],
               "completed": null,
-              "content": "!a We want people to be able to use powerful, well-typed languages at work, not just in their free time.\n\n- Jordan Walke",
+              "content": "!a We want people to be able to use powerful, well-typed languages at work, not just in their free time.",
               "created": 1508746878894,
-              "modified": 1508839303787,
+              "modified": 1508855682198,
               "parent": null,
               "plugins": {},
               "trashed": null,
               "type": "quote",
               "types": {},
               "views": {}
+            },
+            {
+              "_id": null,
+              "created": 1508855682622,
+              "modified": 1508855693469,
+              "completed": null,
+              "parent": null,
+              "trashed": null,
+              "children": [],
+              "type": "normal",
+              "content": "TODO maybe actually get a quote from someone?",
+              "plugins": {
+                "themes": {
+                  "disabled": true
+                }
+              },
+              "types": {},
+              "views": {},
+              "_rev": null
             },
             {
               "_id": null,
@@ -470,9 +489,13 @@
               "completed": null,
               "content": "It's one thing to have the fun, new programming language be something you talk about at meetups & use for side projects. But it's a whole nother step if you can start using it at your day job. /And as we work to bring functional, well-typed programming to more and more people, we're doing so in tandum with other languages as well, like Elm and PureScript. We're all working to grow the functional programming pie.",
               "created": 1508746981609,
-              "modified": 1508747125947,
+              "modified": 1508855473946,
               "parent": null,
-              "plugins": {},
+              "plugins": {
+                "themes": {
+                  "disabled": true
+                }
+              },
               "trashed": null,
               "type": "note",
               "types": {},
@@ -497,7 +520,7 @@
           "completed": null,
           "content": "Why Reason? {\"marginBottom\": \"32px\"}",
           "created": 1508746751082,
-          "modified": 1508839592434,
+          "modified": 1508855682622,
           "parent": null,
           "plugins": {},
           "trashed": null,
@@ -852,34 +875,15 @@
         {
           "_id": null,
           "_rev": null,
-          "children": [],
-          "completed": null,
-          "content": ":thinking_face: hmm not sure it will flow well to tell *two* long-winded stories at the same time. Maybe save the mark story & this slide for later?",
-          "created": 1508748560956,
-          "modified": 1508748598930,
-          "parent": null,
-          "plugins": {
-            "themes": {
-              "disabled": true
-            }
-          },
-          "trashed": null,
-          "type": "normal",
-          "types": {},
-          "views": {}
-        },
-        {
-          "_id": null,
-          "_rev": null,
           "children": [
             {
               "_id": null,
               "_rev": null,
               "children": [],
               "completed": null,
-              "content": "!a {img} adoption_vs_maintenance.svg {\"width\": 500}",
+              "content": "{img} adoption_vs_maintenance.svg {\"width\": 500}",
               "created": 1508746636461,
-              "modified": 1508845925613,
+              "modified": 1508855630615,
               "parent": null,
               "plugins": {},
               "trashed": null,
@@ -987,9 +991,9 @@
                   "_rev": null,
                   "children": [],
                   "completed": null,
-                  "content": "I'll caveat that this graph is a rather poor representation of reality -- in fact, there are a ton of dimensions, and something can help maintainability & hurt it in different ways.",
+                  "content": "caveat - actually lots of dimensions",
                   "created": 1508749059624,
-                  "modified": 1508749105762,
+                  "modified": 1508855825918,
                   "parent": null,
                   "plugins": {},
                   "trashed": null,
@@ -1025,7 +1029,7 @@
       "completed": null,
       "content": "Why Reason?",
       "created": 1508630430854,
-      "modified": 1508748746846,
+      "modified": 1508855775055,
       "parent": null,
       "plugins": {},
       "trashed": null,
@@ -1042,9 +1046,9 @@
           "_rev": null,
           "children": [],
           "completed": null,
-          "content": "How ready is a thing?",
+          "content": "Note about readiness",
           "created": 1508843956517,
-          "modified": 1508843966277,
+          "modified": 1508854629389,
           "parent": null,
           "plugins": {
             "themes": {
@@ -1149,11 +1153,15 @@
         }
       ],
       "completed": null,
-      "content": "_ 3-star readiness system",
+      "content": "_ 3-star readiness system (maybe don't do that?)",
       "created": 1508747349286,
-      "modified": 1508843956517,
+      "modified": 1508854668921,
       "parent": null,
-      "plugins": {},
+      "plugins": {
+        "themes": {
+          "disabled": true
+        }
+      },
       "trashed": null,
       "type": "header",
       "types": {},
@@ -1262,17 +1270,52 @@
             {
               "_id": null,
               "_rev": null,
-              "children": [],
+              "children": [
+                {
+                  "_id": null,
+                  "created": 1508855925241,
+                  "modified": 1508855979398,
+                  "completed": null,
+                  "parent": null,
+                  "trashed": null,
+                  "children": [],
+                  "type": "note",
+                  "content": "Syntax is kindof a funny case, because there are some very strong feelings about it, and also lots of people saying it doesn't matter at all :D. And it can't really be both.",
+                  "plugins": {},
+                  "types": {},
+                  "views": {},
+                  "_rev": null
+                }
+              ],
               "completed": null,
-              "content": "Syntax",
+              "content": "{2} Syntax",
               "created": 1508845745152,
-              "modified": 1508845747009,
+              "modified": 1508855925241,
               "parent": null,
               "plugins": {},
               "trashed": null,
               "type": "header",
               "types": {},
               "views": {}
+            },
+            {
+              "_id": null,
+              "created": 1508855909066,
+              "modified": 1508855915313,
+              "completed": null,
+              "parent": null,
+              "trashed": null,
+              "children": [],
+              "type": "header",
+              "content": "Maybe leave this out for tonight",
+              "plugins": {
+                "themes": {
+                  "disabled": true
+                }
+              },
+              "types": {},
+              "views": {},
+              "_rev": null
             },
             {
               "_id": null,
@@ -1328,7 +1371,42 @@
               "completed": null,
               "content": "{3} Philosophies on Syntax",
               "created": 1508845685342,
-              "modified": 1508849926881,
+              "modified": 1508855915562,
+              "parent": null,
+              "plugins": {
+                "themes": {
+                  "disabled": true
+                }
+              },
+              "trashed": null,
+              "type": "header",
+              "types": {},
+              "views": {}
+            },
+            {
+              "_id": null,
+              "_rev": null,
+              "children": [
+                {
+                  "_id": null,
+                  "created": 1508856021495,
+                  "modified": 1508856111663,
+                  "completed": null,
+                  "parent": null,
+                  "trashed": null,
+                  "children": [],
+                  "type": "quote",
+                  "content": "The point is for others to convince their bosses without getting blocked on trivialities (that turned out not so trivial after all) like syntax and pretty css on docs\n\n- @_chenglou",
+                  "plugins": {},
+                  "types": {},
+                  "views": {},
+                  "_rev": null
+                }
+              ],
+              "completed": null,
+              "content": "_",
+              "created": 1508856020175,
+              "modified": 1508856021507,
               "parent": null,
               "plugins": {},
               "trashed": null,
@@ -1647,9 +1725,13 @@
               "completed": null,
               "content": "What are thie points I want to make?",
               "created": 1508750472266,
-              "modified": 1508750694166,
+              "modified": 1508855993929,
               "parent": null,
-              "plugins": {},
+              "plugins": {
+                "themes": {
+                  "disabled": true
+                }
+              },
               "trashed": null,
               "type": "normal",
               "types": {},
@@ -1889,7 +1971,7 @@
           "completed": null,
           "content": "Syntax",
           "created": 1508023645764,
-          "modified": 1508852340935,
+          "modified": 1508856020175,
           "parent": null,
           "plugins": {},
           "trashed": null,
@@ -1911,6 +1993,21 @@
               "children": [],
               "type": "normal",
               "content": "{spacer: 32}",
+              "plugins": {},
+              "types": {},
+              "views": {},
+              "_rev": null
+            },
+            {
+              "_id": null,
+              "created": 1508856140059,
+              "modified": 1508856164236,
+              "completed": null,
+              "parent": null,
+              "trashed": null,
+              "children": [],
+              "type": "note",
+              "content": "another way we're trying to make Reason easier to adopt is that we're staying within established tooling in the ecosystem.",
               "plugins": {},
               "types": {},
               "views": {},
@@ -1955,9 +2052,9 @@
                   "_rev": null,
                   "children": [],
                   "completed": null,
-                  "content": "React | react | react",
+                  "content": "React | react | reasonreact",
                   "created": 1508750775605,
-                  "modified": 1508844751147,
+                  "modified": 1508856183871,
                   "parent": null,
                   "plugins": {},
                   "trashed": null,
@@ -2151,7 +2248,7 @@
           "completed": null,
           "content": "Tools",
           "created": 1508750740504,
-          "modified": 1508852194653,
+          "modified": 1508856140059,
           "parent": null,
           "plugins": {},
           "trashed": null,
@@ -3131,7 +3228,7 @@
       "completed": null,
       "content": "Ease of Adoption",
       "created": 1508642585687,
-      "modified": 1508844179556,
+      "modified": 1508855907122,
       "parent": null,
       "plugins": {},
       "trashed": null,
@@ -3157,6 +3254,128 @@
           "type": "header",
           "types": {},
           "views": {}
+        },
+        {
+          "_id": null,
+          "created": 1508856222765,
+          "modified": 1508856549549,
+          "completed": null,
+          "parent": null,
+          "trashed": null,
+          "children": [
+            {
+              "_id": null,
+              "created": 1508856227468,
+              "modified": 1508856245385,
+              "completed": null,
+              "parent": null,
+              "trashed": null,
+              "children": [],
+              "type": "note",
+              "content": "there are so many things you get by having an awesome type system at your disposal.",
+              "plugins": {},
+              "types": {},
+              "views": {},
+              "_rev": null
+            },
+            {
+              "_id": null,
+              "created": 1508856549549,
+              "modified": 1508856552869,
+              "completed": null,
+              "parent": null,
+              "trashed": null,
+              "children": [],
+              "type": "normal",
+              "content": "{spacer: 64}",
+              "plugins": {},
+              "types": {},
+              "views": {},
+              "_rev": null
+            },
+            {
+              "_id": null,
+              "created": 1508856254787,
+              "modified": 1508856635498,
+              "completed": null,
+              "parent": null,
+              "trashed": null,
+              "children": [],
+              "type": "normal",
+              "content": "!a ~~jsdoc comments~~",
+              "plugins": {},
+              "types": {},
+              "views": {},
+              "_rev": null
+            },
+            {
+              "_id": null,
+              "created": 1508856268665,
+              "modified": 1508856637713,
+              "completed": null,
+              "parent": null,
+              "trashed": null,
+              "children": [],
+              "type": "normal",
+              "content": "!a ~~linting~~",
+              "plugins": {},
+              "types": {},
+              "views": {},
+              "_rev": null
+            },
+            {
+              "_id": null,
+              "created": 1508856273833,
+              "modified": 1508856639738,
+              "completed": null,
+              "parent": null,
+              "trashed": null,
+              "children": [],
+              "type": "normal",
+              "content": "!a ~~tons of unit tests~~",
+              "plugins": {},
+              "types": {},
+              "views": {},
+              "_rev": null
+            }
+          ],
+          "type": "header",
+          "content": "{2} The Type System",
+          "plugins": {},
+          "types": {},
+          "views": {},
+          "_rev": null
+        },
+        {
+          "_id": null,
+          "created": 1508856519918,
+          "modified": 1508856565478,
+          "completed": null,
+          "parent": null,
+          "trashed": null,
+          "children": [
+            {
+              "_id": null,
+              "created": 1508856384864,
+              "modified": 1508856568933,
+              "completed": null,
+              "parent": null,
+              "trashed": null,
+              "children": [],
+              "type": "quote",
+              "content": "unit tests cover whatever you can think of. types cover everything\n\n- someone on twitter",
+              "plugins": {},
+              "types": {},
+              "views": {},
+              "_rev": null
+            }
+          ],
+          "type": "header",
+          "content": "{2} The Type System",
+          "plugins": {},
+          "types": {},
+          "views": {},
+          "_rev": null
         },
         {
           "_id": null,
@@ -3242,11 +3461,560 @@
           "completed": null,
           "content": "things the type system does awesome",
           "created": 1508643154590,
-          "modified": 1508846033960,
+          "modified": 1508856574380,
+          "parent": null,
+          "plugins": {
+            "themes": {
+              "disabled": true
+            }
+          },
+          "trashed": null,
+          "type": "header",
+          "types": {},
+          "views": {}
+        },
+        {
+          "_id": null,
+          "created": 1508856621233,
+          "modified": 1508856982348,
+          "completed": null,
+          "parent": null,
+          "trashed": null,
+          "children": [
+            {
+              "_id": null,
+              "created": 1508856691642,
+              "modified": 1508857040408,
+              "completed": null,
+              "parent": null,
+              "trashed": null,
+              "children": [
+                {
+                  "_id": null,
+                  "created": 1508857033968,
+                  "modified": 1508857039016,
+                  "completed": null,
+                  "parent": null,
+                  "trashed": null,
+                  "children": [],
+                  "type": "normal",
+                  "content": "{spacer: 32}",
+                  "plugins": {},
+                  "types": {
+                    "code": {
+                      "lastRun": null,
+                      "kernelId": null,
+                      "language": "javascript"
+                    }
+                  },
+                  "views": {},
+                  "_rev": null
+                },
+                {
+                  "_id": null,
+                  "created": 1508856738488,
+                  "modified": 1508857019452,
+                  "completed": null,
+                  "parent": null,
+                  "trashed": null,
+                  "children": [],
+                  "type": "code",
+                  "content": "!a let x = 2;\nlet y () => x;\nlet x = 3;\ny() /* 2 */",
+                  "plugins": {},
+                  "types": {
+                    "code": {
+                      "lastRun": null,
+                      "kernelId": null,
+                      "language": "javascript"
+                    }
+                  },
+                  "views": {},
+                  "_rev": null
+                },
+                {
+                  "_id": null,
+                  "created": 1508857033968,
+                  "modified": 1508857040408,
+                  "completed": null,
+                  "parent": null,
+                  "trashed": null,
+                  "children": [],
+                  "type": "normal",
+                  "content": "{spacer: 32}",
+                  "plugins": {},
+                  "types": {
+                    "code": {
+                      "lastRun": null,
+                      "kernelId": null,
+                      "language": "javascript"
+                    }
+                  },
+                  "views": {},
+                  "_rev": null
+                },
+                {
+                  "_id": null,
+                  "created": 1508856771241,
+                  "modified": 1508857021476,
+                  "completed": null,
+                  "parent": null,
+                  "trashed": null,
+                  "children": [],
+                  "type": "code",
+                  "content": "!a let a = [1,2,3];\nlet b = [0, ...a]; /* a unchanged */\nlet c = {some: \"record\", value: 32};\nlet d = {...c, some: \"override\"};",
+                  "plugins": {},
+                  "types": {
+                    "code": {
+                      "lastRun": null,
+                      "kernelId": null,
+                      "language": "javascript"
+                    }
+                  },
+                  "views": {},
+                  "_rev": null
+                }
+              ],
+              "type": "header",
+              "content": "{2} Immutability",
+              "plugins": {},
+              "types": {},
+              "views": {},
+              "_rev": null
+            },
+            {
+              "_id": null,
+              "_rev": null,
+              "children": [
+                {
+                  "_id": null,
+                  "created": 1508857033968,
+                  "modified": 1508857098609,
+                  "completed": null,
+                  "parent": null,
+                  "trashed": null,
+                  "children": [],
+                  "type": "normal",
+                  "content": "{spacer: 32}",
+                  "plugins": {},
+                  "types": {
+                    "code": {
+                      "lastRun": null,
+                      "kernelId": null,
+                      "language": "javascript"
+                    }
+                  },
+                  "views": {},
+                  "_rev": null
+                },
+                {
+                  "_id": null,
+                  "created": 1508856832859,
+                  "modified": 1508856889058,
+                  "completed": null,
+                  "parent": null,
+                  "trashed": null,
+                  "children": [],
+                  "type": "code",
+                  "content": "let x = ref 2;\nlet y () => !x;\nx := 3;\ny (); /* 3 */\nlet someArray = [|1,2,3|];\nsomeArray.(0) = 0; /* now [|0,2,3|]",
+                  "plugins": {},
+                  "types": {
+                    "code": {
+                      "lastRun": null,
+                      "kernelId": null,
+                      "language": "javascript"
+                    }
+                  },
+                  "views": {},
+                  "_rev": null
+                }
+              ],
+              "completed": null,
+              "content": "{5} But there's mutability if you need it",
+              "created": 1508856832089,
+              "modified": 1508857098609,
+              "parent": null,
+              "plugins": {},
+              "trashed": null,
+              "type": "header",
+              "types": {},
+              "views": {}
+            }
+          ],
+          "type": "header",
+          "content": "Immutability",
+          "plugins": {},
+          "types": {},
+          "views": {},
+          "_rev": null
+        },
+        {
+          "_id": null,
+          "_rev": null,
+          "children": [
+            {
+              "_id": null,
+              "created": 1508857033968,
+              "modified": 1508857246306,
+              "completed": null,
+              "parent": null,
+              "trashed": null,
+              "children": [],
+              "type": "normal",
+              "content": "{spacer: 16}",
+              "plugins": {},
+              "types": {
+                "code": {
+                  "lastRun": null,
+                  "kernelId": null,
+                  "language": "javascript"
+                }
+              },
+              "views": {},
+              "_rev": null
+            },
+            {
+              "_id": null,
+              "created": 1508857169030,
+              "modified": 1508857232923,
+              "completed": null,
+              "parent": null,
+              "trashed": null,
+              "children": [],
+              "type": "normal",
+              "content": "!a JavaScript (web/node/electron/react-native)",
+              "plugins": {},
+              "types": {},
+              "views": {},
+              "_rev": null
+            },
+            {
+              "_id": null,
+              "created": 1508857033968,
+              "modified": 1508857244522,
+              "completed": null,
+              "parent": null,
+              "trashed": null,
+              "children": [],
+              "type": "normal",
+              "content": "{spacer: 16}",
+              "plugins": {},
+              "types": {
+                "code": {
+                  "lastRun": null,
+                  "kernelId": null,
+                  "language": "javascript"
+                }
+              },
+              "views": {},
+              "_rev": null
+            },
+            {
+              "_id": null,
+              "created": 1508857181686,
+              "modified": 1508857234026,
+              "completed": null,
+              "parent": null,
+              "trashed": null,
+              "children": [],
+              "type": "normal",
+              "content": "!a Native (mac/win/linux/raspberry pi/etc.)",
+              "plugins": {},
+              "types": {},
+              "views": {},
+              "_rev": null
+            },
+            {
+              "_id": null,
+              "_rev": null,
+              "children": [
+                {
+                  "_id": null,
+                  "_rev": null,
+                  "children": [],
+                  "completed": null,
+                  "content": "js is awesome in that it will run anywhere, but it won't necessarily run *fast*",
+                  "created": 1508561982459,
+                  "modified": 1508857154246,
+                  "parent": null,
+                  "plugins": {},
+                  "trashed": null,
+                  "type": "normal",
+                  "types": {},
+                  "views": {}
+                },
+                {
+                  "_id": null,
+                  "_rev": null,
+                  "children": [],
+                  "completed": null,
+                  "content": "and so you might instead go with golang on the server, or swift/java for native bits of your react-native app",
+                  "created": 1508562001441,
+                  "modified": 1508857154398,
+                  "parent": null,
+                  "plugins": {},
+                  "trashed": null,
+                  "type": "normal",
+                  "types": {},
+                  "views": {}
+                },
+                {
+                  "_id": null,
+                  "_rev": null,
+                  "children": [],
+                  "completed": null,
+                  "content": "and always at the boundary you'll have type definitions that need to stay in sync but probably don't always. It requires manual curation and you make mistakes, and even if you don't it's annoying.",
+                  "created": 1508562042623,
+                  "modified": 1508857154542,
+                  "parent": null,
+                  "plugins": {},
+                  "trashed": null,
+                  "type": "normal",
+                  "types": {},
+                  "views": {}
+                },
+                {
+                  "_id": null,
+                  "_rev": null,
+                  "children": [],
+                  "completed": null,
+                  "content": "with a server written in reason compiled to native, and the client written in reason compiled to javascript, you can have performant, idiomatic code for both client & server, and they *share type definitions*. You can have it so that if your code type checks, all of your REST endpoints & API calls are well-typed.",
+                  "created": 1508562078398,
+                  "modified": 1508857154671,
+                  "parent": null,
+                  "plugins": {},
+                  "trashed": null,
+                  "type": "normal",
+                  "types": {},
+                  "views": {}
+                },
+                {
+                  "_id": null,
+                  "created": 1508857292035,
+                  "modified": 1508857369544,
+                  "completed": null,
+                  "parent": null,
+                  "trashed": null,
+                  "children": [],
+                  "type": "normal",
+                  "content": "And as our clojurescript friends will attest, having your server & client written in the same language is **awesome**. With Reason, you can share type definitions and serialization code, which eliminates Rest API errors.",
+                  "plugins": {},
+                  "types": {},
+                  "views": {},
+                  "_rev": null
+                },
+                {
+                  "_id": null,
+                  "_rev": null,
+                  "children": [],
+                  "completed": null,
+                  "content": "And if you bring graphql into the picture, then you can really have some fun.",
+                  "created": 1508562154451,
+                  "modified": 1508857154814,
+                  "parent": null,
+                  "plugins": {},
+                  "trashed": null,
+                  "type": "normal",
+                  "types": {},
+                  "views": {}
+                }
+              ],
+              "completed": null,
+              "content": "note",
+              "created": 1508561927236,
+              "modified": 1508857389358,
+              "parent": null,
+              "plugins": {},
+              "trashed": null,
+              "type": "note",
+              "types": {},
+              "views": {}
+            }
+          ],
+          "completed": null,
+          "content": "Multi-platform",
+          "created": 1508857132848,
+          "modified": 1508857392438,
           "parent": null,
           "plugins": {},
           "trashed": null,
           "type": "header",
+          "types": {},
+          "views": {}
+        },
+        {
+          "_id": null,
+          "_rev": null,
+          "children": [
+            {
+              "_id": null,
+              "created": 1508857484813,
+              "modified": 1508857489388,
+              "completed": null,
+              "parent": null,
+              "trashed": null,
+              "children": [],
+              "type": "normal",
+              "content": "a fast compiler that emits fast code",
+              "plugins": {},
+              "types": {},
+              "views": {},
+              "_rev": null
+            },
+            {
+              "_id": null,
+              "_rev": null,
+              "children": [
+                {
+                  "_id": null,
+                  "created": 1508857493820,
+                  "modified": 1508857736402,
+                  "completed": null,
+                  "parent": null,
+                  "trashed": null,
+                  "children": [],
+                  "type": "code",
+                  "content": "let add2 x => x + 2;\nlet doSomethingComplex a => {\n  Js.Int.toString (add2 (add2 a))\n};\nlet result = doSomethingComplex 10;\ntype person = {\n  name: string,\n  age: int\n};\nlet z = \"hello\";\nlet x = {name: z, age: 10};\nlet y = x.name;",
+                  "plugins": {},
+                  "types": {
+                    "code": {
+                      "lastRun": null,
+                      "kernelId": null,
+                      "language": "javascript"
+                    }
+                  },
+                  "views": {},
+                  "_rev": null
+                },
+                {
+                  "_id": null,
+                  "created": 1508857737268,
+                  "modified": 1508858069986,
+                  "completed": null,
+                  "parent": null,
+                  "trashed": null,
+                  "children": [],
+                  "type": "code",
+                  "content": "function add2(x) {\n  return x + 2 | 0;\n}\nfunction doSomethingComplex(a) { \n  return ((a + 2 | 0) + 2 | 0).toString();\n}\nvar result = (14).toString();\nvar z = \"hello\";\nvar x = /* record */[\n  /* name */z,\n  /* age */110\n];\nvar y = z;",
+                  "plugins": {},
+                  "types": {
+                    "code": {
+                      "lastRun": null,
+                      "kernelId": null,
+                      "language": "javascript"
+                    }
+                  },
+                  "views": {},
+                  "_rev": null
+                }
+              ],
+              "completed": null,
+              "content": "_ {\"display\": \"flex\", \"flexDirection\": \"row\"}",
+              "created": 1508857491362,
+              "modified": 1508857737268,
+              "parent": null,
+              "plugins": {},
+              "trashed": null,
+              "type": "normal",
+              "types": {},
+              "views": {}
+            }
+          ],
+          "completed": null,
+          "content": "Bucklescript",
+          "created": 1508857477948,
+          "modified": 1508858119785,
+          "parent": null,
+          "plugins": {},
+          "trashed": null,
+          "type": "header",
+          "types": {},
+          "views": {}
+        },
+        {
+          "_id": null,
+          "created": 1508858119344,
+          "modified": 1508858198699,
+          "completed": null,
+          "parent": null,
+          "trashed": null,
+          "children": [],
+          "type": "normal",
+          "content": "Awesome error messages",
+          "plugins": {
+            "themes": {
+              "disabled": true
+            }
+          },
+          "types": {},
+          "views": {},
+          "_rev": null
+        },
+        {
+          "_id": null,
+          "_rev": null,
+          "children": [
+            {
+              "_id": null,
+              "_rev": null,
+              "children": [],
+              "completed": null,
+              "content": "bucklescript is boss, inlining stuff, etc. what can I find out about this more?",
+              "created": 1508561891613,
+              "modified": 1508645039365,
+              "parent": null,
+              "plugins": {},
+              "trashed": null,
+              "type": "normal",
+              "types": {},
+              "views": {}
+            },
+            {
+              "_id": null,
+              "_rev": null,
+              "children": [],
+              "completed": null,
+              "content": "ask cheng for coolest example of bucklescript doing cool things",
+              "created": 1508752591987,
+              "modified": 1508752609764,
+              "parent": null,
+              "plugins": {},
+              "trashed": null,
+              "type": "normal",
+              "types": {},
+              "views": {}
+            }
+          ],
+          "completed": null,
+          "content": "things are fast for you, thankx - bucklescript inlining magic",
+          "created": 1508643544237,
+          "modified": 1508858127584,
+          "parent": null,
+          "plugins": {
+            "themes": {
+              "disabled": true
+            }
+          },
+          "trashed": null,
+          "type": "normal",
+          "types": {},
+          "views": {}
+        },
+        {
+          "_id": null,
+          "_rev": null,
+          "children": [],
+          "completed": null,
+          "content": "refmt even does auto-upgrades of your syntax to the new version",
+          "created": 1508561912444,
+          "modified": 1508857438204,
+          "parent": null,
+          "plugins": {
+            "themes": {
+              "disabled": true
+            }
+          },
+          "trashed": null,
+          "type": "normal",
           "types": {},
           "views": {}
         },
@@ -3273,11 +4041,15 @@
           "completed": null,
           "content": "immutability as the main game in town",
           "created": 1508643373045,
-          "modified": 1508846035088,
+          "modified": 1508857426085,
           "parent": null,
-          "plugins": {},
+          "plugins": {
+            "themes": {
+              "disabled": true
+            }
+          },
           "trashed": null,
-          "type": "header",
+          "type": "normal",
           "types": {},
           "views": {}
         },
@@ -3335,72 +4107,15 @@
           "completed": null,
           "content": "named arguments, where you at (also optional, etc.)",
           "created": 1508643440562,
-          "modified": 1508846036783,
+          "modified": 1508857427437,
           "parent": null,
-          "plugins": {},
-          "trashed": null,
-          "type": "header",
-          "types": {},
-          "views": {}
-        },
-        {
-          "_id": null,
-          "_rev": null,
-          "children": [
-            {
-              "_id": null,
-              "_rev": null,
-              "children": [],
-              "completed": null,
-              "content": "bucklescript is boss, inlining stuff, etc. what can I find out about this more?",
-              "created": 1508561891613,
-              "modified": 1508645039365,
-              "parent": null,
-              "plugins": {},
-              "trashed": null,
-              "type": "normal",
-              "types": {},
-              "views": {}
-            },
-            {
-              "_id": null,
-              "_rev": null,
-              "children": [],
-              "completed": null,
-              "content": "ask cheng for coolest example of bucklescript doing cool things",
-              "created": 1508752591987,
-              "modified": 1508752609764,
-              "parent": null,
-              "plugins": {},
-              "trashed": null,
-              "type": "normal",
-              "types": {},
-              "views": {}
+          "plugins": {
+            "themes": {
+              "disabled": true
             }
-          ],
-          "completed": null,
-          "content": "things are fast for you, thankx - bucklescript inlining magic",
-          "created": 1508643544237,
-          "modified": 1508846048895,
-          "parent": null,
-          "plugins": {},
+          },
           "trashed": null,
-          "type": "header",
-          "types": {},
-          "views": {}
-        },
-        {
-          "_id": null,
-          "_rev": null,
-          "children": [],
-          "completed": null,
-          "content": "refmt even does auto-upgrades of your syntax to the new version",
-          "created": 1508561912444,
-          "modified": 1508846051607,
-          "parent": null,
-          "plugins": {},
-          "trashed": null,
-          "type": "header",
+          "type": "normal",
           "types": {},
           "views": {}
         },
@@ -3472,11 +4187,15 @@
           "completed": null,
           "content": "fancy type system stuff",
           "created": 1508561548676,
-          "modified": 1508846053199,
+          "modified": 1508857428062,
           "parent": null,
-          "plugins": {},
+          "plugins": {
+            "themes": {
+              "disabled": true
+            }
+          },
           "trashed": null,
-          "type": "header",
+          "type": "normal",
           "types": {},
           "views": {}
         },
@@ -3609,11 +4328,15 @@
           "completed": null,
           "content": "babel transforms -- ppx's built into the language! - prolly a couple of slides on this",
           "created": 1508560989864,
-          "modified": 1508846055751,
+          "modified": 1508857428517,
           "parent": null,
-          "plugins": {},
+          "plugins": {
+            "themes": {
+              "disabled": true
+            }
+          },
           "trashed": null,
-          "type": "header",
+          "type": "normal",
           "types": {},
           "views": {}
         },
@@ -3715,11 +4438,15 @@
           "completed": null,
           "content": "share type definitions between client & server, native & js compilation targets",
           "created": 1508561927236,
-          "modified": 1508846057367,
+          "modified": 1508857429180,
           "parent": null,
-          "plugins": {},
+          "plugins": {
+            "themes": {
+              "disabled": true
+            }
+          },
           "trashed": null,
-          "type": "header",
+          "type": "normal",
           "types": {},
           "views": {}
         },
@@ -3871,7 +4598,7 @@
       "completed": null,
       "content": "Ease of Maintenance",
       "created": 1508643168309,
-      "modified": 1508847193977,
+      "modified": 1508858119785,
       "parent": null,
       "plugins": {},
       "trashed": null,
@@ -4070,11 +4797,15 @@
       "completed": null,
       "content": "Both!",
       "created": 1508645065756,
-      "modified": 1508847206623,
+      "modified": 1508858190195,
       "parent": null,
-      "plugins": {},
+      "plugins": {
+        "themes": {
+          "disabled": true
+        }
+      },
       "trashed": null,
-      "type": "header",
+      "type": "normal",
       "types": {},
       "views": {}
     },
@@ -4196,85 +4927,101 @@
           "children": [
             {
               "_id": null,
-              "_rev": null,
-              "children": [],
+              "created": 1508858153254,
+              "modified": 1508858238729,
               "completed": null,
-              "content": "stolidify standard library",
-              "created": 1508769655561,
-              "modified": 1508769665442,
               "parent": null,
-              "plugins": {},
               "trashed": null,
-              "type": "normal",
-              "types": {},
-              "views": {}
-            },
-            {
-              "_id": null,
-              "_rev": null,
               "children": [
                 {
                   "_id": null,
                   "_rev": null,
                   "children": [],
                   "completed": null,
-                  "content": "we've started on this, w/ glamor, express, etc. some others",
-                  "created": 1508769694152,
-                  "modified": 1508769706329,
+                  "content": "stolidify standard library",
+                  "created": 1508769655561,
+                  "modified": 1508858237681,
                   "parent": null,
                   "plugins": {},
                   "trashed": null,
-                  "type": "note",
+                  "type": "normal",
+                  "types": {},
+                  "views": {}
+                },
+                {
+                  "_id": null,
+                  "_rev": null,
+                  "children": [
+                    {
+                      "_id": null,
+                      "_rev": null,
+                      "children": [],
+                      "completed": null,
+                      "content": "we've started on this, w/ glamor, express, etc. some others",
+                      "created": 1508769694152,
+                      "modified": 1508769706329,
+                      "parent": null,
+                      "plugins": {},
+                      "trashed": null,
+                      "type": "note",
+                      "types": {},
+                      "views": {}
+                    }
+                  ],
+                  "completed": null,
+                  "content": "bindings to popular js libraries",
+                  "created": 1508769685129,
+                  "modified": 1508858237994,
+                  "parent": null,
+                  "plugins": {},
+                  "trashed": null,
+                  "type": "normal",
+                  "types": {},
+                  "views": {}
+                },
+                {
+                  "_id": null,
+                  "_rev": null,
+                  "children": [],
+                  "completed": null,
+                  "content": "community packages",
+                  "created": 1508769665442,
+                  "modified": 1508858238481,
+                  "parent": null,
+                  "plugins": {},
+                  "trashed": null,
+                  "type": "normal",
+                  "types": {},
+                  "views": {}
+                },
+                {
+                  "_id": null,
+                  "_rev": null,
+                  "children": [],
+                  "completed": null,
+                  "content": "blog posts, tutorials, etc.",
+                  "created": 1508769669770,
+                  "modified": 1508858238729,
+                  "parent": null,
+                  "plugins": {},
+                  "trashed": null,
+                  "type": "normal",
                   "types": {},
                   "views": {}
                 }
               ],
-              "completed": null,
-              "content": "bindings to popular js libraries",
-              "created": 1508769685129,
-              "modified": 1508769694152,
-              "parent": null,
+              "type": "list",
+              "content": "_",
               "plugins": {},
-              "trashed": null,
-              "type": "normal",
               "types": {},
-              "views": {}
-            },
-            {
-              "_id": null,
-              "_rev": null,
-              "children": [],
-              "completed": null,
-              "content": "community packages",
-              "created": 1508769665442,
-              "modified": 1508769669770,
-              "parent": null,
-              "plugins": {},
-              "trashed": null,
-              "type": "normal",
-              "types": {},
-              "views": {}
-            },
-            {
-              "_id": null,
-              "_rev": null,
-              "children": [],
-              "completed": null,
-              "content": "blog posts, tutorials, etc.",
-              "created": 1508769669770,
-              "modified": 1508769682866,
-              "parent": null,
-              "plugins": {},
-              "trashed": null,
-              "type": "normal",
-              "types": {},
-              "views": {}
+              "views": {},
+              "_rev": null
             }
           ],
           "completed": null,
           "content": "What remains?",
           "created": 1508769650361,
-          "modified": 1508769766150,
+          "modified": 1508858238729,
           "parent": null,
           "plugins": {},
           "trashed": null,
