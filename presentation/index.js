@@ -16,9 +16,12 @@ import {
 
 // Import image preloader util
 import preloader from "spectacle/lib/utils/preloader";
+import * as convert from "./convertFromNm"
 
 // Import theme
 import createTheme from "spectacle/lib/themes/default";
+// import createTheme from 'spectacle-theme-nova';
+// import { theme } from "spectacle-theme-solarized-dark";
 
 // Require CSS
 require("normalize.css");
@@ -33,8 +36,8 @@ preloader(images);
 
 const theme = createTheme({
   primary: "white",
-  secondary: "#1F2022",
-  tertiary: "#03A9FC",
+  secondary: "rgb(255, 142, 38)",
+  tertiary: "#00539e",
   quartenary: "#CECECE"
 }, {
   primary: "Montserrat",
@@ -43,9 +46,25 @@ const theme = createTheme({
 
 export default class Presentation extends React.Component {
   render() {
+    const nodes = []
+    convert.collectSlideNodes(require('../talk.nm.json'), [], nodes)
+    const slides = nodes.map(convert.nodeToSlide)
+    console.log('slides', slides)
     return (
-      <Deck transition={["zoom", "slide"]} transitionDuration={500} theme={theme}>
-        <Slide transition={["zoom"]} bgColor="primary">
+      <Deck transition={["fade"]} transitionDuration={500} progress="number" theme={theme}>
+        {slides}
+
+        {/* <Slide bgColor="primary" notes={`Hello I'm a note and I have lots to say to you
+Here's some space.
+<br/>
+<br/>
+And more space I guess
+<br/>
+<b>
+Ah this is innerHTML huh
+</b>
+
+`}>
           <Heading size={1} fit caps lineHeight={1} textColor="secondary">
             Spectacle Boilerplate
           </Heading>
@@ -53,16 +72,16 @@ export default class Presentation extends React.Component {
             open the presentation/index.js file to get started
           </Text>
         </Slide>
-        <Slide transition={["fade"]} bgColor="tertiary">
+        <Slide bgColor="tertiary">
           <Heading size={6} textColor="primary" caps>Typography</Heading>
           <Heading size={1} textColor="secondary">Heading 1</Heading>
-          <Heading size={2} textColor="secondary">Heading 2</Heading>
+          <Heading size={2} textColor="tertiary">Heading 2</Heading>
           <Heading size={3} textColor="secondary">Heading 3</Heading>
           <Heading size={4} textColor="secondary">Heading 4</Heading>
           <Heading size={5} textColor="secondary">Heading 5</Heading>
           <Text size={6} textColor="secondary">Standard text</Text>
         </Slide>
-        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
+        <Slide bgColor="primary" textColor="tertiary">
           <Heading size={6} textColor="secondary" caps>Standard List</Heading>
           <List>
             <ListItem>Item 1</ListItem>
@@ -71,12 +90,12 @@ export default class Presentation extends React.Component {
             <ListItem>Item 4</ListItem>
           </List>
         </Slide>
-        <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
+        <Slide bgColor="secondary" textColor="primary">
           <BlockQuote>
             <Quote>Example Quote</Quote>
             <Cite>Author</Cite>
           </BlockQuote>
-        </Slide>
+        </Slide> */}
       </Deck>
     );
   }
