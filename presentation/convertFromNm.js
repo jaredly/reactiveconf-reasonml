@@ -55,11 +55,33 @@ const flatten = (prev, item, index) => {
   }
 }
 
+let getStyle = text => {
+  if (!text.includes('{"')) {
+    return {text, style: {}}
+  }
+  const parts = text.split('{"')
+  try {
+    const style = JSON.parse('{"' + parts.slice(1).join('{"'))
+    return {text: parts[0].trim(), style}
+  } catch (e) {
+    console.error('failed to parse style: ' + text)
+    return {text, style: {}}
+  }
+}
+
 const renderText = text => {
   if (text.startsWith('~~') && text.endsWith('~~')) {
     return <S type='strikethrough' children={text.slice(2, -2)} />
   }
   return text
+}
+
+const splitQuote = text => {
+  const lines = text.split('\n')
+  if (lines[lines.length - 1].startsWith('- ') && lines[lines.length - 2] === '') {
+    return {text: lines.slice(0, -2).join('\n'), cite: lines[lines.length - 1].slice(2)}
+  }
+  return {text, cite: null}
 }
 
 const childContent = node => {
@@ -77,9 +99,25 @@ const childContent = node => {
       hidden = true
     }
     let body
-    if (content.trim() && content.trim() !== '_') {
+    if (node.type === 'quote') {
+      const {text, cite} = splitQuote(content)
+      body = <BlockQuote>
+        <Quote>{text}</Quote>
+        {cite ? <Cite>{cite}</Cite> : null}
+        </BlockQuote>
+    } else if (node.type !== 'normal') {
+      console.log('unexpected type', node.type)
+      // TODO handle code block
+      if (node.type === 'code') {
+        console.log(node)
+        body = <CodePane source={node.content} />
+      } else {
+        body = null
+      }
+    } else if (content.trim() && content.trim() !== '_') {
       const style = hidden ? {visibility: 'hidden'} : {}
-      const text = renderText(content)
+      const res = getStyle(content)
+      const text = renderText(res.text)
       if (hasTheme(node, 'header1')) {
         body = <Heading size={1} style={style} children={text} />
       } else if (hasTheme(node, 'header2')) {
@@ -107,12 +145,14 @@ export const nodeToSlide = ({node, sectionTitles}) => {
   const contents = node.children.map(child => {
     return childContent(child)
   }).filter(Boolean).reduce(flatten, [])
-  if (!node.content.startsWith('_ ')) {
-    contents.unshift(<Heading fit>{node.content}</Heading>)
+  if (!node.content.startsWith('_ ') && node.content.trim() !== '_') {
+    let {text, style} = getStyle(node.content)
+    contents.unshift(<Heading size={1} style={style}>{text}</Heading>)
   } else if (node.content.slice(2).trim().length) {
     notes.unshift({content: node.content.slice(2).trim()})
   }
   return <Slide
+    style={{backgroundColor: 'white'}}
     notes={notes.map(n => n.content).join('<br/><br/>')}
     children={contents}
   />

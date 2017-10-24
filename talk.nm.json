@@ -342,7 +342,7 @@
         {
           "_id": null,
           "created": 1508831239537,
-          "modified": 1508831242919,
+          "modified": 1508838317303,
           "completed": null,
           "parent": null,
           "trashed": null,
@@ -351,7 +351,9 @@
           "content": "JavaScript-flavored OCaml",
           "plugins": {
             "themes": {
-              "header2": true
+              "header2": true,
+              "header1": false,
+              "header3": false
             }
           },
           "types": {},
@@ -405,11 +407,15 @@
         }
       ],
       "completed": null,
-      "content": "Reason:",
+      "content": "Reason: {\"fontSize\": \"9rem\"}",
       "created": 1508630140783,
-      "modified": 1508831239538,
+      "modified": 1508838367390,
       "parent": null,
-      "plugins": {},
+      "plugins": {
+        "themes": {
+          "header1": false
+        }
+      },
       "trashed": null,
       "type": "header",
       "types": {},
@@ -428,9 +434,9 @@
               "_rev": null,
               "children": [],
               "completed": null,
-              "content": "!a \"We want people to be able to use powerful, well-typed languages at work, not just in their free time\"\n\n- Jordan Walke",
+              "content": "!a We want people to be able to use powerful, well-typed languages at work, not just in their free time.\n\n- Jordan Walke",
               "created": 1508746878894,
-              "modified": 1508828687648,
+              "modified": 1508839303787,
               "parent": null,
               "plugins": {},
               "trashed": null,
@@ -489,9 +495,9 @@
             }
           ],
           "completed": null,
-          "content": "Why Reason?",
+          "content": "Why Reason? {\"marginBottom\": \"32px\"}",
           "created": 1508746751082,
-          "modified": 1508769777685,
+          "modified": 1508839592434,
           "parent": null,
           "plugins": {},
           "trashed": null,
@@ -510,14 +516,14 @@
               "completed": null,
               "content": "adoption",
               "created": 1508747206192,
-              "modified": 1508831177164,
+              "modified": 1508839345440,
               "parent": null,
               "plugins": {
                 "themes": {
                   "highlighted": false,
                   "header1": false,
-                  "header3": true,
-                  "header2": false
+                  "header3": false,
+                  "header2": true
                 }
               },
               "trashed": null,
@@ -547,11 +553,12 @@
               "completed": null,
               "content": "maintenance",
               "created": 1508747215877,
-              "modified": 1508831176516,
+              "modified": 1508839346864,
               "parent": null,
               "plugins": {
                 "themes": {
-                  "header3": true
+                  "header3": false,
+                  "header2": true
                 }
               },
               "trashed": null,
@@ -595,13 +602,14 @@
               "_rev": null,
               "children": [],
               "completed": null,
-              "content": "~~adoption~~",
+              "content": "adoption {\"opacity\": 0.7}",
               "created": 1508747206192,
-              "modified": 1508830064447,
+              "modified": 1508839366487,
               "parent": null,
               "plugins": {
                 "themes": {
-                  "header3": true
+                  "header3": false,
+                  "header2": true
                 }
               },
               "trashed": null,
@@ -629,13 +637,14 @@
               "_rev": null,
               "children": [],
               "completed": null,
-              "content": "~~maintenance~~",
+              "content": "maintenance {\"opacity\": 0.7}",
               "created": 1508747215877,
-              "modified": 1508830065438,
+              "modified": 1508839369975,
               "parent": null,
               "plugins": {
                 "themes": {
-                  "header3": true
+                  "header3": false,
+                  "header2": true
                 }
               },
               "trashed": null,

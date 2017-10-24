@@ -35,7 +35,7 @@ const images = {
 preloader(images);
 
 const theme = createTheme({
-  primary: "white",
+  primary: "#656565",
   secondary: "rgb(255, 142, 38)",
   tertiary: "#00539e",
   quartenary: "#CECECE"
@@ -43,6 +43,9 @@ const theme = createTheme({
   primary: "Montserrat",
   secondary: "Helvetica"
 });
+theme.screen.components.quote.fontSize = '3.5rem'
+theme.screen.components.quote.fontWeight = '400'
+theme.screen.components.quote.lineHeight = '1.3'
 
 export default class Presentation extends React.Component {
   render() {
@@ -51,7 +54,7 @@ export default class Presentation extends React.Component {
     const slides = nodes.map(convert.nodeToSlide)
     console.log('slides', slides)
     return (
-      <Deck transition={["fade"]} transitionDuration={500} progress="number" theme={theme}>
+      <Deck transition={["fade"]} transitionDuration={50} progress="number" theme={theme}>
         {slides}
 
         {/* <Slide bgColor="primary" notes={`Hello I'm a note and I have lots to say to you
