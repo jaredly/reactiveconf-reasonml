@@ -50,10 +50,16 @@ const theme = createTheme(colors, {
 theme.screen.components.quote.fontSize = '3.5rem'
 theme.screen.components.quote.fontWeight = '400'
 theme.screen.components.quote.lineHeight = '1.3'
+theme.screen.components.codePane.pre.minWidth = 'unset'
+theme.screen.components.codePane.pre.fontSize = '0.9rem'
+theme.screen.components.code.minWidth = 'unset'
 theme.screen.components.list.color = colors.primary
 theme.screen.components.table.textAlign = 'left'
 theme.screen.components.table.textAlign = 'left'
+theme.screen.components.tableItem.fontSize = '2rem'
 theme.screen.components.tableItem.padding = '8px 0'
+theme.screen.components.heading.h3.fontSize = '4rem'
+theme.screen.components.heading.h4.fontSize = '3.5rem'
 theme.screen.global.body.backgroundColor = 'white'
 theme.screen.global.body.color = colors.primary
 

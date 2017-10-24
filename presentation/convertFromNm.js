@@ -21,6 +21,7 @@ import {
   Table,
   TableRow,
   TableItem,
+  CodePane,
   TableHeaderItem,
   Text
 } from "spectacle";
@@ -117,7 +118,7 @@ const childContent = node => {
     } else if (node.type === 'list') {
       if (node.content === '{table}') {
         body = <Table
-        children={node.children.map(child => (
+        children={node.children.filter(child => !isDisabled(child)).map(child => (
           <TableRow
             children={child.content.split('|').map(text => <TableItem>{text.trim()}</TableItem>)}
           />
@@ -133,7 +134,8 @@ const childContent = node => {
       // TODO handle code block
       if (node.type === 'code') {
         console.log(node)
-        body = <CodePane key={key} source={node.content} />
+        let lang = node.types.code.language || 'mllike'
+        body = <CodePane key={key} source={node.content} lang={lang} />
       } else {
         body = null
       }
@@ -229,7 +231,7 @@ export const nodeToSlide = ({node, sectionTitles}) => {
   }
   return <Slide
     key={node._id}
-    // maxWidth={1500}
+    maxWidth={1200}
     // maxHeight={800}
     style={{
       backgroundColor: 'white',
