@@ -55,6 +55,7 @@ export default class Presentation extends React.Component {
     const slides = nodes.map(convert.nodeToSlide)
     console.log('slides', slides)
     return (
+      <div>
       <Deck transition={["fade"]} transitionDuration={300} progress="number" theme={theme}>
         {slides}
 
@@ -101,6 +102,24 @@ Ah this is innerHTML huh
           </BlockQuote>
         </Slide> */}
       </Deck>
+        <div style={{
+          position: 'absolute',
+          bottom: '16px',
+          left: '40px',
+          fontSize: '36px',
+          display: 'flex',
+          flexDirection: 'row',
+        }}>
+          <a style={{
+            textDecoration: 'none',
+          }} href="https://twitter.com/@jaredforsyth">@jaredforsyth</a>
+          <div style={{width: '32px'}}/>
+          <a style={{
+            textDecoration: 'none',
+          }} href="https://jaredforsyth.com/reactiveconf-reasonml">jaredforsyth.com/reactiveconf-reasonml</a>
+
+        </div>
+      </div>
     );
   }
 }

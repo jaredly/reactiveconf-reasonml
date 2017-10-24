@@ -1,6 +1,7 @@
 
 // Import React
 import React from "react";
+import ReactDOM from 'react-dom'
 
 // Import Spectacle Core tags
 import {
@@ -144,6 +145,23 @@ const childContent = node => {
     return body
 };
 
+class Portal extends React.Component {
+  componentDidMount() {
+    this.node = document.createElement('div')
+    document.body.appendChild(this.node)
+    ReactDOM.render(this.props.children, this.node)
+  }
+
+  componentWillUnmount() {
+    ReactDOM.unmountComponentAtNode(this.node)
+    this.node.parentNode.removeChild(this.node)
+  }
+
+  render() {
+    return null
+  }
+}
+
 export const nodeToSlide = ({node, sectionTitles}) => {
   const notes = [];
   dfs(node, node => node.type === 'note' ? notes.push(node) : null)
@@ -158,18 +176,23 @@ export const nodeToSlide = ({node, sectionTitles}) => {
   }
   if (sectionTitles.length) {
     const last = sectionTitles[sectionTitles.length - 1]
-    contents.unshift(<Text style={{
+    contents.unshift(<Portal><div style={{
       position: 'absolute',
-      bottom: '100%',
-      marginBottom: '32px',
+      top: '32px',
+      left: '40px',
     }}
     children={last}
-    />)
+    /></Portal>)
   }
   return <Slide
+    key={node._id}
     maxWidth={1500}
     maxHeight={800}
-    style={{backgroundColor: 'white'}}
+    style={{
+      backgroundColor: 'white',
+      minHeight: 800,
+      minWidth: 1500,
+    }}
     notes={notes.map(n => n.content).join('<br/><br/>')}
     children={contents}
   />
