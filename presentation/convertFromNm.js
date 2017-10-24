@@ -16,6 +16,7 @@ import {
   List,
   Quote,
   Slide,
+  Image,
   Text
 } from "spectacle";
 
@@ -98,6 +99,7 @@ const childContent = node => {
       content = content.slice(2)
       hidden = true
     }
+
     let body
     if (node.type === 'quote') {
       const {text, cite} = splitQuote(content)
@@ -114,7 +116,10 @@ const childContent = node => {
       } else {
         body = null
       }
+    } else if (content.trim().startsWith('{img} ')) {
+      body = <Image width={700} src={'assets/' + content.trim().slice('{img} '.length)} />
     } else if (content.trim() && content.trim() !== '_') {
+
       const style = hidden ? {visibility: 'hidden'} : {}
       const res = getStyle(content)
       const text = renderText(res.text)
@@ -151,7 +156,19 @@ export const nodeToSlide = ({node, sectionTitles}) => {
   } else if (node.content.slice(2).trim().length) {
     notes.unshift({content: node.content.slice(2).trim()})
   }
+  if (sectionTitles.length) {
+    const last = sectionTitles[sectionTitles.length - 1]
+    contents.unshift(<Text style={{
+      position: 'absolute',
+      bottom: '100%',
+      marginBottom: '32px',
+    }}
+    children={last}
+    />)
+  }
   return <Slide
+    maxWidth={1500}
+    maxHeight={800}
     style={{backgroundColor: 'white'}}
     notes={notes.map(n => n.content).join('<br/><br/>')}
     children={contents}
