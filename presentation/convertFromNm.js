@@ -18,6 +18,10 @@ import {
   Quote,
   Slide,
   Image,
+  Table,
+  TableRow,
+  TableItem,
+  TableHeaderItem,
   Text
 } from "spectacle";
 
@@ -111,9 +115,19 @@ const childContent = node => {
         {cite ? <Cite>{cite}</Cite> : null}
         </BlockQuote>
     } else if (node.type === 'list') {
-      body = <List
-        children={node.children.map(child => <ListItem>{child.content}</ListItem>)}
-      />
+      if (node.content === '{table}') {
+        body = <Table
+        children={node.children.map(child => (
+          <TableRow
+            children={child.content.split('|').map(text => <TableItem>{text.trim()}</TableItem>)}
+          />
+        ))}
+        />
+      } else {
+        body = <List
+          children={node.children.map(child => <ListItem>{child.content}</ListItem>)}
+        />
+      }
     } else if (node.type !== 'normal') {
       console.log('unexpected type', node.type)
       // TODO handle code block
@@ -124,7 +138,12 @@ const childContent = node => {
         body = null
       }
     } else if (content.trim().startsWith('{img} ')) {
-      body = <Image key={key} width={700} src={'assets/' + content.trim().slice('{img} '.length)} />
+      const {text, style} = getStyle(content.slice('{img} '.length))
+      body = <Image key={key} style={style} width={style.width} height={style.height} src={'assets/' + text.trim()} />
+    } else if (content.trim().startsWith('{spacer:')) {
+      body = <div key={key} style={{
+        height: parseInt(content.trim().slice('{spacer:'.length, -1))
+      }} />
     } else if (content.trim() && !content.startsWith('_ ')) {
       // console.log(content)
       const style = hidden ? {visibility: 'hidden'} : {}
@@ -171,19 +190,30 @@ class Portal extends React.Component {
   }
 }
 
+const collectNotes = (root, inNote, collector) => {
+  if (inNote || root.type === 'note') collector.push(root.content)
+  root.children.forEach(child => collectNotes(child, inNote || root.type === 'note', collector))
+}
+
 export const nodeToSlide = ({node, sectionTitles}) => {
   const notes = [];
-  dfs(node, node => node.type === 'note' ? notes.push(node) : null)
+  collectNotes(node, false, notes)
+  // dfs(node, node => node.type === 'note' ? notes.push(node) : null)
   const contents = node.children.map(child => {
     return childContent(child)
   }).filter(Boolean).reduce(flatten, [])
   let titleText = null
   if (!node.content.startsWith('_ ') && node.content.trim() !== '_') {
     let {text, style} = getStyle(node.content)
+    let size = 1
+    if (text.match(/^\{\d\}/)) {
+      size = parseInt(text[1])
+      text = text.slice(3).trim()
+    }
     titleText = text
-    contents.unshift(<Heading key="title" size={1} style={style}>{text}</Heading>)
+    contents.unshift(<Heading key="title" size={size} style={style}>{text}</Heading>)
   } else if (node.content.slice(2).trim().length) {
-    notes.unshift({content: node.content.slice(2).trim()})
+    notes.unshift(node.content.slice(2).trim())
   }
   if (sectionTitles.length) {
     const last = sectionTitles[sectionTitles.length - 1]
@@ -199,14 +229,14 @@ export const nodeToSlide = ({node, sectionTitles}) => {
   }
   return <Slide
     key={node._id}
-    maxWidth={1500}
-    maxHeight={800}
+    // maxWidth={1500}
+    // maxHeight={800}
     style={{
       backgroundColor: 'white',
       // minHeight: 800,
       // minWidth: 1500,
     }}
-    notes={notes.map(n => n.content).join('<br/><br/>')}
+    notes={notes.join('<br/><br/>')}
     children={contents}
   />
 }
