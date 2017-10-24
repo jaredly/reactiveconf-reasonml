@@ -34,18 +34,21 @@ const images = {
 
 preloader(images);
 
-const theme = createTheme({
+const colors = {
   primary: "#656565",
   secondary: "rgb(255, 142, 38)",
   tertiary: "#00539e",
   quartenary: "#CECECE"
-}, {
+}
+
+const theme = createTheme(colors, {
   primary: "Montserrat",
   secondary: "Helvetica"
 });
 theme.screen.components.quote.fontSize = '3.5rem'
 theme.screen.components.quote.fontWeight = '400'
 theme.screen.components.quote.lineHeight = '1.3'
+theme.screen.components.list.color = colors.primary
 theme.screen.global.body.backgroundColor = 'white'
 
 export default class Presentation extends React.Component {

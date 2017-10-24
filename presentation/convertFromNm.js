@@ -101,46 +101,55 @@ const childContent = node => {
       hidden = true
     }
 
+    const key = Math.random().toString(16)
+
     let body
     if (node.type === 'quote') {
       const {text, cite} = splitQuote(content)
-      body = <BlockQuote>
+      body = <BlockQuote key={key} >
         <Quote>{text}</Quote>
         {cite ? <Cite>{cite}</Cite> : null}
         </BlockQuote>
+    } else if (node.type === 'list') {
+      body = <List
+        children={node.children.map(child => <ListItem>{child.content}</ListItem>)}
+      />
     } else if (node.type !== 'normal') {
       console.log('unexpected type', node.type)
       // TODO handle code block
       if (node.type === 'code') {
         console.log(node)
-        body = <CodePane source={node.content} />
+        body = <CodePane key={key} source={node.content} />
       } else {
         body = null
       }
     } else if (content.trim().startsWith('{img} ')) {
-      body = <Image width={700} src={'assets/' + content.trim().slice('{img} '.length)} />
-    } else if (content.trim() && content.trim() !== '_') {
-
+      body = <Image key={key} width={700} src={'assets/' + content.trim().slice('{img} '.length)} />
+    } else if (content.trim() && !content.startsWith('_ ')) {
+      // console.log(content)
       const style = hidden ? {visibility: 'hidden'} : {}
       const res = getStyle(content)
       const text = renderText(res.text)
       if (hasTheme(node, 'header1')) {
-        body = <Heading size={1} style={style} children={text} />
+        body = <Heading key={key} size={1} style={style} children={text} />
       } else if (hasTheme(node, 'header2')) {
-        body = <Heading size={2} style={style} children={text} />
+        body = <Heading key={key} size={2} style={style} children={text} />
       } else if (hasTheme(node, 'header3')) {
-        body = <Heading size={3} style={style} children={text} />
+        body = <Heading key={key} size={3} style={style} children={text} />
       } else {
-        body = <Text style={style} children={text} />
+        body = <Text key={key} style={style} children={text} />
       }
     } else {
+      const res = getStyle(content)
+      console.log('style', res.style)
       body = <Layout
-        style={{flexDirection: 'column'}}
+        key={key}
+        style={[{flexDirection: 'column'}, res.style]}
         children={node.children.map(childContent).reduce(flatten, [])}
       />
     }
     if (appear) {
-      return <Appear children={body} />
+      return <Appear key={key} children={body} />
     }
     return body
 };
@@ -168,21 +177,25 @@ export const nodeToSlide = ({node, sectionTitles}) => {
   const contents = node.children.map(child => {
     return childContent(child)
   }).filter(Boolean).reduce(flatten, [])
+  let titleText = null
   if (!node.content.startsWith('_ ') && node.content.trim() !== '_') {
     let {text, style} = getStyle(node.content)
-    contents.unshift(<Heading size={1} style={style}>{text}</Heading>)
+    titleText = text
+    contents.unshift(<Heading key="title" size={1} style={style}>{text}</Heading>)
   } else if (node.content.slice(2).trim().length) {
     notes.unshift({content: node.content.slice(2).trim()})
   }
   if (sectionTitles.length) {
     const last = sectionTitles[sectionTitles.length - 1]
-    contents.unshift(<Portal><div style={{
-      position: 'absolute',
-      top: '32px',
-      left: '40px',
-    }}
-    children={last}
-    /></Portal>)
+    if (last !== titleText) {
+      contents.unshift(<Portal key="header" ><div style={{
+        position: 'absolute',
+        top: '32px',
+        left: '40px',
+      }}
+      children={last}
+      /></Portal>)
+    }
   }
   return <Slide
     key={node._id}
@@ -190,8 +203,8 @@ export const nodeToSlide = ({node, sectionTitles}) => {
     maxHeight={800}
     style={{
       backgroundColor: 'white',
-      minHeight: 800,
-      minWidth: 1500,
+      // minHeight: 800,
+      // minWidth: 1500,
     }}
     notes={notes.map(n => n.content).join('<br/><br/>')}
     children={contents}
