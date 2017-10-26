@@ -91,6 +91,24 @@ const splitQuote = text => {
   return {text, cite: null}
 }
 
+const childContentText = content => {
+  let appear = false
+  let hidden = false
+  if (content.match(/^\!a /))  {
+    content = content.slice(3)
+    appear = true
+  }
+  if (content.match(/^\!h /))  {
+    content = content.slice(3)
+    hidden = true
+  }
+  content = <span>{content}</span>
+  if (appear) {
+    return <Appear children={content} />
+  }
+  return content
+}
+
 const childContent = node => {
     if (isDisabled(node)) return
     if (node.type === 'note') return
@@ -136,7 +154,18 @@ const childContent = node => {
         />
       } else {
         body = <List
-          children={node.children.map(child => <ListItem>{child.content}</ListItem>)}
+          children={node.children.map(child => {
+            let content = child.content
+            let appear = false
+            if (content.match(/^\!a /))  {
+              content = content.slice(3)
+              appear = true
+            }
+            if (appear) {
+              return <Appear><ListItem>{content}</ListItem></Appear>
+            }
+            return <ListItem>{content}</ListItem>
+          })}
         />
       }
     } else if (node.type !== 'normal') {
