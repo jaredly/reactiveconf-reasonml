@@ -80,6 +80,14 @@ const renderText = text => {
   if (text.startsWith('~~') && text.endsWith('~~')) {
     return <S type='strikethrough' children={text.slice(2, -2)} />
   }
+  if (text.startsWith('{a} ')) {
+    text = text.slice('{a} '.length)
+    let href = text
+    if (!href.match(/^https?:\/\//)) {
+      href = 'https://' + href
+    }
+    return <a href={href}>{text}</a>
+  }
   return text
 }
 
@@ -168,16 +176,24 @@ const childContent = node => {
           })}
         />
       }
+    } else if (node.type === 'code') {
+      console.log(node)
+      let lang = node.types.code.language || 'mllike'
+      let style = {}
+      if (content.startsWith('#!{')) {
+        let lines = content.split('\n')
+        style = JSON.parse(lines[0].slice(2))
+        content = lines.slice(1).join('\n')
+      }
+      body = <CodePane
+        key={key}
+        style={style}
+        source={content}
+        lang={lang}
+      />
     } else if (node.type !== 'normal') {
       console.log('unexpected type', node.type)
-      // TODO handle code block
-      if (node.type === 'code') {
-        console.log(node)
-        let lang = node.types.code.language || 'mllike'
-        body = <CodePane key={key} source={content} lang={lang} />
-      } else {
-        body = null
-      }
+      body = null
     } else if (content.trim().startsWith('{img} ')) {
       const {text, style} = getStyle(content.slice('{img} '.length))
       body = <Image key={key} style={style} width={style.width} height={style.height} src={'assets/' + text.trim()} />
