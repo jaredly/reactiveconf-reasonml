@@ -210,8 +210,9 @@ const childContent = node => {
       }} />
     } else if (content.trim() && !content.startsWith('_ ')) {
       // console.log(content)
-      const style = hidden ? {visibility: 'hidden'} : {}
+      let style = hidden ? {visibility: 'hidden'} : {}
       const res = getStyle(content)
+      style = {...style, ...res.style}
       const text = renderText(res.text)
       if (hasTheme(node, 'header1')) {
         body = <Heading key={key} size={1} style={style} children={text} />
