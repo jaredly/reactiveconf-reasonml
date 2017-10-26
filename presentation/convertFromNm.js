@@ -83,6 +83,11 @@ const renderText = text => {
   if (text.startsWith('{a} ')) {
     text = text.slice('{a} '.length)
     let href = text
+    if (text.includes(' @@ ')) {
+      let parts = text.split(' @@ ')
+      href = parts[0]
+      text = parts[1]
+    }
     if (!href.match(/^https?:\/\//)) {
       href = 'https://' + href
     }

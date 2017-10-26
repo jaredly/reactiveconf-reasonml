@@ -20,6 +20,11 @@ Montserrat-Thin.ttf
 Montserrat-ThinItalic.ttf
 */
 
+a,
+a:visited {
+  color: #00539e;
+}
+
 @font-face {
   font-family: 'Montserrat';
   font-style: normal;
