@@ -117,12 +117,22 @@ const childContent = node => {
         </BlockQuote>
     } else if (node.type === 'list') {
       if (node.content === '{table}') {
+        let children = node.children.filter(child => !isDisabled(child))
         body = <Table
-        children={node.children.filter(child => !isDisabled(child)).map(child => (
-          <TableRow
-            children={child.content.split('|').map(text => <TableItem>{text.trim()}</TableItem>)}
-          />
-        ))}
+        children={
+          [
+            <TableRow>
+              {children[0].content.split('|').map(text => {
+                return <TableHeaderItem>{text.trim()}</TableHeaderItem>
+              })}
+            </TableRow>
+          ]
+          .concat(
+            children.slice(1).map(child => (
+            <TableRow
+              children={child.content.split('|').map(text => <TableItem>{text.trim()}</TableItem>)}
+            />
+        )))}
         />
       } else {
         body = <List
@@ -143,8 +153,10 @@ const childContent = node => {
       const {text, style} = getStyle(content.slice('{img} '.length))
       body = <Image key={key} style={style} width={style.width} height={style.height} src={'assets/' + text.trim()} />
     } else if (content.trim().startsWith('{spacer:')) {
+      const size = parseInt(content.trim().slice('{spacer:'.length, -1))
       body = <div key={key} style={{
-        height: parseInt(content.trim().slice('{spacer:'.length, -1))
+        height: size,
+        width: size,
       }} />
     } else if (content.trim() && !content.startsWith('_ ')) {
       // console.log(content)
@@ -220,15 +232,17 @@ export const nodeToSlide = ({node, sectionTitles}) => {
   }
   if (sectionTitles.length) {
     const last = sectionTitles[sectionTitles.length - 1]
-    if (last !== titleText) {
-      contents.unshift(<Portal key="header" ><div style={{
-        position: 'absolute',
-        top: '32px',
-        left: '40px',
-      }}
-      children={last}
-      /></Portal>)
+    let titles = sectionTitles.slice()
+    if (last === titleText) {
+      titles.pop()
     }
+    contents.unshift(<Portal key="header" ><div style={{
+      position: 'absolute',
+      top: '32px',
+      left: '40px',
+    }}
+    children={titles.join(' > ')}
+    /></Portal>)
   }
   return <Slide
     key={node._id}

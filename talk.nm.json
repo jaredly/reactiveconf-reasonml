@@ -765,7 +765,7 @@
                   "completed": null,
                   "content": "This was in 2014, and so when React came out it was fantastic to have the structure & patterns of state management and componentization, which made larger applications so much easier to maintain.",
                   "created": 1508641855407,
-                  "modified": 1508641925937,
+                  "modified": 1509011169838,
                   "parent": null,
                   "plugins": {},
                   "trashed": null,
@@ -780,14 +780,69 @@
                   "completed": null,
                   "content": "But then React paid a cost in adoption -- to get anywhere you had to learn about JSX, and you had to setup this transpiler webpack plugin, etc.",
                   "created": 1508641925938,
-                  "modified": 1508641968640,
+                  "modified": 1509011171427,
                   "parent": null,
                   "plugins": {},
                   "trashed": null,
                   "type": "normal",
                   "types": {},
                   "views": {}
-                },
+                }
+              ],
+              "completed": null,
+              "content": "Because these two things can sometimes be in conflict!",
+              "created": 1508641425590,
+              "modified": 1509011174451,
+              "parent": null,
+              "plugins": {},
+              "trashed": null,
+              "type": "note",
+              "types": {},
+              "views": {}
+            }
+          ],
+          "completed": null,
+          "content": "_ easy to start, easy to keep going, angular story",
+          "created": 1508747204368,
+          "modified": 1509011177466,
+          "parent": null,
+          "plugins": {},
+          "trashed": null,
+          "type": "header",
+          "types": {},
+          "views": {}
+        },
+        {
+          "_id": null,
+          "created": 1509011178371,
+          "modified": 1509011193002,
+          "completed": null,
+          "parent": null,
+          "trashed": null,
+          "children": [
+            {
+              "_id": null,
+              "created": 1509011193002,
+              "modified": 1509011210765,
+              "completed": null,
+              "parent": null,
+              "trashed": null,
+              "children": [],
+              "type": "normal",
+              "content": "{img} babel.png {\"width\": 700}",
+              "plugins": {},
+              "types": {},
+              "views": {},
+              "_rev": null
+            },
+            {
+              "_id": null,
+              "created": 1509011155888,
+              "modified": 1509011188786,
+              "completed": null,
+              "parent": null,
+              "trashed": null,
+              "children": [
                 {
                   "_id": null,
                   "_rev": null,
@@ -795,7 +850,7 @@
                   "completed": null,
                   "content": "And in the years since then we've seen an explosion of javascript tools & configurations, boilerplates and setup-kits, in the majority of cases aimed at attacking the second problem -- scaling large apps, making it easy to maintain. And so we got flux, redux, babel, etc.",
                   "created": 1508641968640,
-                  "modified": 1508642059588,
+                  "modified": 1509011166323,
                   "parent": null,
                   "plugins": {},
                   "trashed": null,
@@ -810,7 +865,7 @@
                   "completed": null,
                   "content": "But then of course there was the backlash: javascript fatigue. We had dialed up so much on the \"we want things that scale to large apps & teams\" that we harmed the initial experience.",
                   "created": 1508642127264,
-                  "modified": 1508748386137,
+                  "modified": 1509011166579,
                   "parent": null,
                   "plugins": {},
                   "trashed": null,
@@ -825,7 +880,7 @@
                   "completed": null,
                   "content": "oh insert tweet from @JavascriptDev or whatever the napolean dynamite thing is talking about \"we set up babel\"",
                   "created": 1508641751891,
-                  "modified": 1508642275543,
+                  "modified": 1509011166995,
                   "parent": null,
                   "plugins": {},
                   "trashed": null,
@@ -840,7 +895,7 @@
                   "completed": null,
                   "content": "And finally after lots of back & forth & fatigue, we got create-react-app, which tries to make it once again easy to start.",
                   "created": 1508641724605,
-                  "modified": 1508746703403,
+                  "modified": 1509011168059,
                   "parent": null,
                   "plugins": {},
                   "trashed": null,
@@ -849,28 +904,20 @@
                   "views": {}
                 }
               ],
-              "completed": null,
-              "content": "Because these two things can sometimes be in conflict!",
-              "created": 1508641425590,
-              "modified": 1508748966408,
-              "parent": null,
+              "type": "normal",
+              "content": "react story now",
               "plugins": {},
-              "trashed": null,
-              "type": "note",
               "types": {},
-              "views": {}
+              "views": {},
+              "_rev": null
             }
           ],
-          "completed": null,
-          "content": "_ easy to start, easy to keep going, angular story",
-          "created": 1508747204368,
-          "modified": 1508769775741,
-          "parent": null,
-          "plugins": {},
-          "trashed": null,
           "type": "header",
+          "content": "_ babel setup joke",
+          "plugins": {},
           "types": {},
-          "views": {}
+          "views": {},
+          "_rev": null
         },
         {
           "_id": null,
@@ -881,9 +928,9 @@
               "_rev": null,
               "children": [],
               "completed": null,
-              "content": "{img} adoption_vs_maintenance.svg {\"width\": 500}",
+              "content": "{img} adoption_vs_maintenance.svg {\"width\": 700}",
               "created": 1508746636461,
-              "modified": 1508855630615,
+              "modified": 1508864249717,
               "parent": null,
               "plugins": {},
               "trashed": null,
@@ -1029,7 +1076,7 @@
       "completed": null,
       "content": "Why Reason?",
       "created": 1508630430854,
-      "modified": 1508855775055,
+      "modified": 1509011188786,
       "parent": null,
       "plugins": {},
       "trashed": null,
@@ -1178,7 +1225,7 @@
           "completed": null,
           "content": "Ease of Adoption",
           "created": 1508844179556,
-          "modified": 1508844200106,
+          "modified": 1508864331373,
           "parent": null,
           "plugins": {},
           "trashed": null,
@@ -1193,7 +1240,7 @@
           "completed": null,
           "content": "I'm going to start things off with the adoption bit, because I want y'all to know what it would be like to start using Reason. Then I'll talk about all the long-term benefits that you'll also be buying into when you jump on this train. ",
           "created": 1508642608517,
-          "modified": 1508644165738,
+          "modified": 1508864331373,
           "parent": null,
           "plugins": {},
           "trashed": null,
@@ -2019,6 +2066,21 @@
               "children": [
                 {
                   "_id": null,
+                  "created": 1508871967238,
+                  "modified": 1508871974062,
+                  "completed": null,
+                  "parent": null,
+                  "trashed": null,
+                  "children": [],
+                  "type": "normal",
+                  "content": "Tool | Js | Reason",
+                  "plugins": {},
+                  "types": {},
+                  "views": {},
+                  "_rev": null
+                },
+                {
+                  "_id": null,
                   "_rev": null,
                   "children": [],
                   "completed": null,
@@ -2145,7 +2207,7 @@
               "completed": null,
               "content": "{table}",
               "created": 1508844399146,
-              "modified": 1508852276479,
+              "modified": 1508871967238,
               "parent": null,
               "plugins": {},
               "trashed": null,
@@ -2248,7 +2310,7 @@
           "completed": null,
           "content": "Tools",
           "created": 1508750740504,
-          "modified": 1508856140059,
+          "modified": 1508871966510,
           "parent": null,
           "plugins": {},
           "trashed": null,
@@ -2517,9 +2579,9 @@
                   "_rev": null,
                   "children": [],
                   "completed": null,
-                  "content": "{spacer:64}",
+                  "content": "{spacer:128}",
                   "created": 1508845357605,
-                  "modified": 1508845429269,
+                  "modified": 1508865377858,
                   "parent": null,
                   "plugins": {},
                   "trashed": null,
@@ -2733,14 +2795,56 @@
               "children": [
                 {
                   "_id": null,
+                  "created": 1508864512444,
+                  "modified": 1508864518308,
+                  "completed": null,
+                  "parent": null,
+                  "trashed": null,
+                  "children": [],
+                  "type": "normal",
+                  "content": "{spacer: 32}",
+                  "plugins": {},
+                  "types": {
+                    "code": {
+                      "lastRun": null,
+                      "kernelId": null,
+                      "language": "javascript"
+                    }
+                  },
+                  "views": {},
+                  "_rev": null
+                },
+                {
+                  "_id": null,
                   "created": 1508852725339,
-                  "modified": 1508852934258,
+                  "modified": 1508864487695,
                   "completed": null,
                   "parent": null,
                   "trashed": null,
                   "children": [],
                   "type": "code",
-                  "content": "let beep: (unit => unit) = [%bs.raw {| function () {\n    var context = new AudioContext();\n    var oscillator = context.createOscillator();\n    var gainNode = context.createGain();\n\n    oscillator.frequency.value = 340;\n    oscillator.type = 'sine';\n\n    oscillator.connect(gainNode);\n    gainNode.connect(context.destination)\n    oscillator.start();\n\n    setTimeout(() => {\n      oscillator.stop()\n      context.close()\n    }, 100)\n} |}];\n/* later */\nbeep ();",
+                  "content": "let beep: (unit => unit) = [%bs.raw {| // <- multiline string\n  function () {\n    // woohoo javascript no rules\n    var context = new AudioContext();\n    var oscillator = context.createOscillator();\n    var gainNode = context.createGain();\n\n    oscillator.frequency.value = 340;\n    oscillator.type = 'sine';\n\n    oscillator.connect(gainNode);\n    gainNode.connect(context.destination)\n    oscillator.start();\n\n    setTimeout(() => {\n      oscillator.stop()\n      context.close()\n    }, 100)\n} |}];\n/* later */\nbeep ();",
+                  "plugins": {},
+                  "types": {
+                    "code": {
+                      "lastRun": null,
+                      "kernelId": null,
+                      "language": "javascript"
+                    }
+                  },
+                  "views": {},
+                  "_rev": null
+                },
+                {
+                  "_id": null,
+                  "created": 1508864532492,
+                  "modified": 1508864867377,
+                  "completed": null,
+                  "parent": null,
+                  "trashed": null,
+                  "children": [],
+                  "type": "note",
+                  "content": "So this is a gea",
                   "plugins": {},
                   "types": {
                     "code": {
@@ -2756,7 +2860,7 @@
               "completed": null,
               "content": "{3} Raw JavaScript",
               "created": 1508844082987,
-              "modified": 1508852725339,
+              "modified": 1508864532492,
               "parent": null,
               "plugins": {},
               "trashed": null,
@@ -2770,14 +2874,99 @@
               "children": [
                 {
                   "_id": null,
-                  "created": 1508852745374,
-                  "modified": 1508852842279,
+                  "created": 1508864512444,
+                  "modified": 1508864527837,
                   "completed": null,
                   "parent": null,
                   "trashed": null,
                   "children": [],
-                  "type": "code",
-                  "content": "let recognize: (string => unit) => (unit => unit) = [%bs.raw {|\n  function(done) {\n    var r = new webkitSpeechRecognition();\n    r.continuous = false\n    r.interimResults = false\n    r.onresult = evt => {\n      done(evt.results[0][0].transcript)\n    }\n    r.start()\n    return () => r.abort()\n  }\n|}];\n/* later */\nlet abort = recognise (fun recognizedText => {\n  Js.log2 \"You said: \" recognizedText;\n});",
+                  "type": "normal",
+                  "content": "{spacer: 32}",
+                  "plugins": {},
+                  "types": {
+                    "code": {
+                      "lastRun": null,
+                      "kernelId": null,
+                      "language": "javascript"
+                    }
+                  },
+                  "views": {},
+                  "_rev": null
+                },
+                {
+                  "_id": null,
+                  "created": 1508865149241,
+                  "modified": 1508865178031,
+                  "completed": null,
+                  "parent": null,
+                  "trashed": null,
+                  "children": [
+                    {
+                      "_id": null,
+                      "created": 1508852745374,
+                      "modified": 1508865235598,
+                      "completed": null,
+                      "parent": null,
+                      "trashed": null,
+                      "children": [],
+                      "type": "code",
+                      "content": "// we're passing a \"done\" fn\n// and we're returned an \"abort\" function\nlet recognize: (string => unit) => (unit => unit) =\n[%bs.raw {|\n  function(done) {\n    var r = new webkitSpeechRecognition();\n    r.continuous = false\n    r.interimResults = false\n    r.onresult = evt => {\n      done(evt.results[0][0].transcript)\n    }\n    r.start()\n    return () => r.abort()\n  }\n|}];\n/* later */\nlet abort = recognise (fun recognizedText => {\n  Js.log2 \"You said: \" recognizedText;\n});\n// and if you want to cancel it\nabort ();",
+                      "plugins": {},
+                      "types": {
+                        "code": {
+                          "lastRun": null,
+                          "kernelId": null,
+                          "language": "javascript"
+                        }
+                      },
+                      "views": {},
+                      "_rev": null
+                    },
+                    {
+                      "_id": null,
+                      "created": 1508865178031,
+                      "modified": 1508865181647,
+                      "completed": null,
+                      "parent": null,
+                      "trashed": null,
+                      "children": [],
+                      "type": "normal",
+                      "content": "{spacer: 32}",
+                      "plugins": {},
+                      "types": {
+                        "code": {
+                          "lastRun": null,
+                          "kernelId": null,
+                          "language": "javascript"
+                        }
+                      },
+                      "views": {},
+                      "_rev": null
+                    },
+                    {
+                      "_id": null,
+                      "created": 1508865128394,
+                      "modified": 1508865159000,
+                      "completed": null,
+                      "parent": null,
+                      "trashed": null,
+                      "children": [],
+                      "type": "code",
+                      "content": "var recognize = (\n  function(done) {\n    var r = new webkitSpeechRecognition();\n    r.continuous = false\n    r.interimResults = false\n    r.onresult = evt => {\n      done(evt.results[0][0].transcript)\n    }\n    r.start()\n    return () => r.abort()\n  }\n);\n\nvar abort = recognize((function (recognizedText) {\n  console.log(\"You said: \", recognizedText);\n  return /* () */0;\n}));\n\nabort();",
+                      "plugins": {},
+                      "types": {
+                        "code": {
+                          "lastRun": null,
+                          "kernelId": null,
+                          "language": "javascript"
+                        }
+                      },
+                      "views": {},
+                      "_rev": null
+                    }
+                  ],
+                  "type": "normal",
+                  "content": "_ {\"display\": \"flex\", \"flexDirection\": \"row\"}",
                   "plugins": {},
                   "types": {
                     "code": {
@@ -2824,7 +3013,7 @@
               "completed": null,
               "content": "{3} Raw JavaScript II",
               "created": 1508844116828,
-              "modified": 1508854176517,
+              "modified": 1508865159000,
               "parent": null,
               "plugins": {},
               "trashed": null,
@@ -2874,6 +3063,27 @@
                 },
                 {
                   "_id": null,
+                  "created": 1508864512444,
+                  "modified": 1508865514628,
+                  "completed": null,
+                  "parent": null,
+                  "trashed": null,
+                  "children": [],
+                  "type": "normal",
+                  "content": "{spacer: 32}",
+                  "plugins": {},
+                  "types": {
+                    "code": {
+                      "lastRun": null,
+                      "kernelId": null,
+                      "language": "javascript"
+                    }
+                  },
+                  "views": {},
+                  "_rev": null
+                },
+                {
+                  "_id": null,
                   "created": 1508854475467,
                   "modified": 1508854577640,
                   "completed": null,
@@ -2897,7 +3107,7 @@
               "completed": null,
               "content": "{3} Externals (FFI)",
               "created": 1508844136819,
-              "modified": 1508854555824,
+              "modified": 1508865514628,
               "parent": null,
               "plugins": {},
               "trashed": null,
@@ -3228,7 +3438,7 @@
       "completed": null,
       "content": "Ease of Adoption",
       "created": 1508642585687,
-      "modified": 1508855907122,
+      "modified": 1508864331373,
       "parent": null,
       "plugins": {},
       "trashed": null,
@@ -3609,13 +3819,13 @@
                 {
                   "_id": null,
                   "created": 1508856832859,
-                  "modified": 1508856889058,
+                  "modified": 1508868846590,
                   "completed": null,
                   "parent": null,
                   "trashed": null,
                   "children": [],
                   "type": "code",
-                  "content": "let x = ref 2;\nlet y () => !x;\nx := 3;\ny (); /* 3 */\nlet someArray = [|1,2,3|];\nsomeArray.(0) = 0; /* now [|0,2,3|]",
+                  "content": "let x = ref 2;\nlet y () => !x;\nx := 3;\ny (); /* 3 */\nlet someArray = [|1,2,3|];\nsomeArray.(0) = 0; /* now [|0,2,3|] */",
                   "plugins": {},
                   "types": {
                     "code": {
@@ -3711,7 +3921,7 @@
             {
               "_id": null,
               "created": 1508857181686,
-              "modified": 1508857234026,
+              "modified": 1508869074182,
               "completed": null,
               "parent": null,
               "trashed": null,
@@ -4938,9 +5148,9 @@
                   "_rev": null,
                   "children": [],
                   "completed": null,
-                  "content": "stolidify standard library",
+                  "content": "solidify standard library",
                   "created": 1508769655561,
-                  "modified": 1508858237681,
+                  "modified": 1508869095727,
                   "parent": null,
                   "plugins": {},
                   "trashed": null,
