@@ -221,7 +221,7 @@ const childContent = node => {
       } else if (hasTheme(node, 'header3')) {
         body = <Heading key={key} size={3} style={style} children={text} />
       } else {
-        body = <Text key={key} style={style} children={text} />
+        body = <Text key={key} lineHeight={style.lineHeight} style={style} children={text} />
       }
     } else {
       const res = getStyle(content)

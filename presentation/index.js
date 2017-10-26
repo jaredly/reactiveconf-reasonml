@@ -61,6 +61,7 @@ theme.screen.components.tableItem.padding = '8px 0'
 theme.screen.components.listItem.padding = '16px 0'
 theme.screen.fullscreen.zIndex = 2000
 theme.screen.components.heading.h3.fontSize = '4rem'
+theme.screen.components.text.lineHeight = '1.5'
 theme.screen.components.heading.h4.fontSize = '3.5rem'
 theme.screen.global.body.backgroundColor = 'white'
 theme.screen.global.body.color = colors.primary

@@ -747,13 +747,28 @@
                 {
                   "_id": null,
                   "created": 1509020051904,
-                  "modified": 1509020094028,
+                  "modified": 1509022603970,
                   "completed": null,
                   "parent": null,
                   "trashed": null,
                   "children": [],
                   "type": "normal",
-                  "content": "A several years ago I was working on a large angular app. Now, when I got started with angular, I was really impressed by how easy it was!",
+                  "content": "Several years ago I was working on a large angular app. Now, when I got started with angular, I was really impressed by how easy it was!",
+                  "plugins": {},
+                  "types": {},
+                  "views": {},
+                  "_rev": null
+                },
+                {
+                  "_id": null,
+                  "created": 1509022604370,
+                  "modified": 1509022610067,
+                  "completed": null,
+                  "parent": null,
+                  "trashed": null,
+                  "children": [],
+                  "type": "normal",
+                  "content": "....story about angular....",
                   "plugins": {},
                   "types": {},
                   "views": {},
@@ -830,12 +845,27 @@
                   "type": "normal",
                   "types": {},
                   "views": {}
+                },
+                {
+                  "_id": null,
+                  "created": 1509022632211,
+                  "modified": 1509022649339,
+                  "completed": null,
+                  "parent": null,
+                  "trashed": null,
+                  "children": [],
+                  "type": "normal",
+                  "content": "Another example of this conflict is the state of javascript in 2017 (slide joke)",
+                  "plugins": {},
+                  "types": {},
+                  "views": {},
+                  "_rev": null
                 }
               ],
               "completed": null,
               "content": "Because these two things can sometimes be in conflict!",
               "created": 1508641425590,
-              "modified": 1509020051904,
+              "modified": 1509022632211,
               "parent": null,
               "plugins": {},
               "trashed": null,
@@ -2639,12 +2669,42 @@
               "children": [
                 {
                   "_id": null,
+                  "created": 1509022737799,
+                  "modified": 1509022756520,
+                  "completed": null,
+                  "parent": null,
+                  "trashed": null,
+                  "children": [],
+                  "type": "normal",
+                  "content": "{spacer: 32}",
+                  "plugins": {},
+                  "types": {},
+                  "views": {},
+                  "_rev": null
+                },
+                {
+                  "_id": null,
+                  "created": 1509022709216,
+                  "modified": 1509022747464,
+                  "completed": null,
+                  "parent": null,
+                  "trashed": null,
+                  "children": [],
+                  "type": "normal",
+                  "content": "!a Goal: painlessly introduce Reason to your existing codebase {\"lineHeight\": \"1.5\"}",
+                  "plugins": {},
+                  "types": {},
+                  "views": {},
+                  "_rev": null
+                },
+                {
+                  "_id": null,
                   "_rev": null,
                   "children": [],
                   "completed": null,
-                  "content": "hoo this is a big one",
+                  "content": "The third part of nailing adoption is interop with javascript. \n{animate in: goal}",
                   "created": 1508751032747,
-                  "modified": 1508845469435,
+                  "modified": 1509022953148,
                   "parent": null,
                   "plugins": {},
                   "trashed": null,
@@ -2656,7 +2716,7 @@
               "completed": null,
               "content": "{2} Javascript Interop",
               "created": 1508844327490,
-              "modified": 1509014039469,
+              "modified": 1509022737799,
               "parent": null,
               "plugins": {},
               "trashed": null,
@@ -2709,9 +2769,13 @@
                       "completed": null,
                       "content": "Calling javascript from clojurescript is not that hard, but the ecosystem is based on maven & java's stack, not on npm. So there's some more barrier there",
                       "created": 1508751488441,
-                      "modified": 1508751529920,
+                      "modified": 1509022990311,
                       "parent": null,
-                      "plugins": {},
+                      "plugins": {
+                        "themes": {
+                          "disabled": true
+                        }
+                      },
                       "trashed": null,
                       "type": "normal",
                       "types": {},
@@ -2724,9 +2788,13 @@
                       "completed": null,
                       "content": "Elm is way cool because they emphasize safety much more. (for example, no runtime exceptions on the language). They keep elm at arm's length, in order to preserve runtime safety. So the only (blessed) way to communicate with javascript is through structured ports that make sure you're not letting any poorly-typed data into your system. Their packaging ecosystem is like hackage maybe? prolly not. But they've got their own deal, and it like pretty well discourages fraternizing with unsafe javascript.",
                       "created": 1508751539866,
-                      "modified": 1508751710253,
+                      "modified": 1509022982914,
                       "parent": null,
-                      "plugins": {},
+                      "plugins": {
+                        "themes": {
+                          "disabled": true
+                        }
+                      },
                       "trashed": null,
                       "type": "normal",
                       "types": {},
@@ -3045,6 +3113,48 @@
               "children": [
                 {
                   "_id": null,
+                  "created": 1509023060017,
+                  "modified": 1509023065833,
+                  "completed": null,
+                  "parent": null,
+                  "trashed": null,
+                  "children": [],
+                  "type": "normal",
+                  "content": "structured interop",
+                  "plugins": {},
+                  "types": {
+                    "code": {
+                      "lastRun": null,
+                      "kernelId": null,
+                      "language": "javascript"
+                    }
+                  },
+                  "views": {},
+                  "_rev": null
+                },
+                {
+                  "_id": null,
+                  "created": 1508864512444,
+                  "modified": 1509023074893,
+                  "completed": null,
+                  "parent": null,
+                  "trashed": null,
+                  "children": [],
+                  "type": "normal",
+                  "content": "{spacer: 32}",
+                  "plugins": {},
+                  "types": {
+                    "code": {
+                      "lastRun": null,
+                      "kernelId": null,
+                      "language": "javascript"
+                    }
+                  },
+                  "views": {},
+                  "_rev": null
+                },
+                {
+                  "_id": null,
                   "created": 1508854201259,
                   "modified": 1508854553677,
                   "completed": null,
@@ -3108,9 +3218,9 @@
                 }
               ],
               "completed": null,
-              "content": "{3} Externals (FFI)",
+              "content": "{3} Externals",
               "created": 1508844136819,
-              "modified": 1508865514628,
+              "modified": 1509023074893,
               "parent": null,
               "plugins": {},
               "trashed": null,
@@ -5256,6 +5366,40 @@
           "children": [
             {
               "_id": null,
+              "created": 1509023168143,
+              "modified": 1509023172167,
+              "completed": null,
+              "parent": null,
+              "trashed": null,
+              "children": [],
+              "type": "normal",
+              "content": "{spacer: 32}",
+              "plugins": {},
+              "types": {},
+              "views": {},
+              "_rev": null
+            },
+            {
+              "_id": null,
+              "created": 1509023157585,
+              "modified": 1509023161457,
+              "completed": null,
+              "parent": null,
+              "trashed": null,
+              "children": [],
+              "type": "normal",
+              "content": "Are we there yet?",
+              "plugins": {
+                "themes": {
+                  "header3": true
+                }
+              },
+              "types": {},
+              "views": {},
+              "_rev": null
+            },
+            {
+              "_id": null,
               "_rev": null,
               "children": [],
               "completed": null,
@@ -5273,7 +5417,7 @@
           "completed": null,
           "content": "Status",
           "created": 1508846153425,
-          "modified": 1508847151099,
+          "modified": 1509023168143,
           "parent": null,
           "plugins": {},
           "trashed": null,
